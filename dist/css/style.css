@@ -8,20 +8,22 @@
 
 body {
   background-color: #2196f3;
-  margin: 2rem 0;
+  position: relative;
+  height: 100%;
 }
 
 .header__title {
   color: #e57373;
   background-color: whitesmoke;
-  padding: 1.5rem 4rem;
+  padding: 1rem 4rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0.5rem auto 0 auto;
   border-radius: 1rem;
   font-weight: 700;
   text-align: center;
+  font-size: 18px;
 }
 
 .quiz__question {
@@ -30,6 +32,10 @@ body {
   width: 60%;
   padding: 2rem;
   border-radius: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .quiz__category {
   text-align: center;
@@ -42,6 +48,7 @@ body {
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1rem 0;
+  min-width: 70%;
 }
 .question__title {
   font-size: 0.9rem;
@@ -56,9 +63,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 70%;
 }
 .answer__btn {
-  margin-bottom: 1rem;
   -webkit-box-shadow: 6px 6px 10px -1px #acb8c9, -6px -6px 20px -1px #e8f8ff;
           box-shadow: 6px 6px 10px -1px #acb8c9, -6px -6px 20px -1px #e8f8ff;
   border: none;
@@ -66,10 +73,14 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
 }
 .answer__btn:active {
-  -webkit-box-shadow: 6px 6px 10px -1px grey, -6px -6px 20px -1px #e8f8ff;
-          box-shadow: 6px 6px 10px -1px grey, -6px -6px 20px -1px #e8f8ff;
+  -webkit-box-shadow: 6px 6px 10px -1px grey;
+          box-shadow: 6px 6px 10px -1px grey;
 }
 
 .opt-selected button {
@@ -80,24 +91,44 @@ body {
 }
 
 .button {
-  margin: 2rem auto;
   display: block;
   padding: 1rem 2rem;
   border-radius: 8px;
   border: none;
-  -webkit-box-shadow: 6px 6px 10px -1px grey;
-          box-shadow: 6px 6px 10px -1px grey;
+  -webkit-box-shadow: 6px 6px 10px -1px #404040;
+          box-shadow: 6px 6px 10px -1px #404040;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   width: 300px;
   font-weight: 700;
+  margin: 0 auto;
 }
 .button:active {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.7);
-          box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.9);
+          box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.9);
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

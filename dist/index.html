@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&amp;display=swap" rel="stylesheet"><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Aplicación de preguntas</title>
   </head>
@@ -14,7 +16,14 @@
     <header class="header">
       <h1 class="header__title">APLICACIÓN DE PREGUNTAS "LOS QUE SI PROGRAMAN"</h1>
     </header>
-    <main class="quiz-container" id="quiz-container"></main>
-    <button class="button send-answer" type="submit" id="send-answer">ENVIAR RESPUESTAS </button><script src="./js/script.js"></script>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper quiz-container" id="quiz-container"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <button class="button send-answer" type="submit" id="send-answer">
+      ENVIAR RESPUESTAS <!-- Swiper JS --></button>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

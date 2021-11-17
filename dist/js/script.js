@@ -1,6 +1,14 @@
 $sendAnswer = document.getElementById('send-answer');
 
 (() => {
+  //ini swiper
+  var swiper = new Swiper('.mySwiper', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
   // 1 paso elemento del dom
   const $fetchAsync = document.getElementById('fetch-async'),
     $fragment = document.createDocumentFragment(),
@@ -17,8 +25,9 @@ $sendAnswer = document.getElementById('send-answer');
         const element = json.results[i];
         const $section = document.createElement('section');
         $section.classList.add('quiz__question');
-        const $sectionAnswerContent = document.createElement('section');
-        $sectionAnswerContent.classList.add('section');
+        $section.classList.add('swiper-slide');
+        // const $sectionAnswerContent = document.createElement('section');
+        // $sectionAnswerContent.classList.add('section');
 
         $section.innerHTML = `
           <h3 class="quiz__category" id="quiz-category">${element.category}</h3>
